@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# Local system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Raw datasets
+data/raw/
+
+# Large processed datasets
+data/processed/studentVle_clean.csv
