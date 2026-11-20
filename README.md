@@ -1,116 +1,144 @@
-# EdTech Learning Analytics: Analisis Keterlibatan dan Hasil Belajar Mahasiswa
 
-## Tentang Proyek
+<div align="center">
 
-**EdTech Learning Analytics** merupakan proyek analisis data yang bertujuan untuk memahami hubungan antara tingkat keterlibatan mahasiswa dalam menggunakan Virtual Learning Environment (VLE) dengan hasil belajar yang diperoleh.
+# EdTech Learning Analytics
 
-Proyek ini menggunakan **Open University Learning Analytics Dataset (OULAD)** untuk mengidentifikasi pola aktivitas mahasiswa, menganalisis distribusi hasil belajar, serta menghasilkan wawasan yang dapat membantu institusi pendidikan dalam memantau keterlibatan dan mengidentifikasi mahasiswa yang berpotensi mengalami kesulitan akademik.
+### Student Engagement & Academic Performance Analysis
 
-## Tujuan Proyek
+An Educational Data Analytics Project Using the Open University Learning Analytics Dataset (OULAD)
 
-1. Memahami karakteristik dan struktur dataset aktivitas pembelajaran mahasiswa.
-2. Melakukan proses data cleaning dan validasi data.
-3. Menganalisis pola keterlibatan mahasiswa berdasarkan aktivitas pada VLE.
-4. Mengidentifikasi hubungan antara aktivitas pembelajaran dan hasil belajar mahasiswa.
-5. Menyajikan hasil analisis melalui dashboard interaktif menggunakan Power BI.
-6. Menghasilkan wawasan bisnis dan rekomendasi berbasis data.
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+
+**Language:** English | [Bahasa Indonesia](README.id.md)
+
+</div>
+
+---
+
+## About the Project
+
+**EdTech Learning Analytics** is a data analytics project that explores the relationship between student engagement in a Virtual Learning Environment (VLE) and academic performance.
+
+Using the **Open University Learning Analytics Dataset (OULAD)**, this project identifies student activity patterns, examines academic performance distributions, and generates insights that can help educational institutions monitor student engagement and identify students who may be at risk of academic difficulties.
+
+## Project Objectives
+
+1. Understand the characteristics and structure of student learning activity datasets.
+2. Perform data cleaning and data validation.
+3. Analyze student engagement patterns based on VLE activities.
+4. Explore the relationship between learning activities and academic performance.
+5. Develop an interactive dashboard using Power BI.
+6. Generate data-driven insights and business recommendations.
 
 ## Dataset
 
-Dataset yang digunakan adalah **Open University Learning Analytics Dataset (OULAD)** yang menyediakan data mengenai mahasiswa, aktivitas pembelajaran, pendaftaran, dan hasil belajar.
+This project uses the **Open University Learning Analytics Dataset (OULAD)**, which contains information about students, learning activities, course registrations, and academic results.
 
-Sumber dataset: [Open University Learning Analytics Dataset](https://analyse.kmi.open.ac.uk/open_dataset)
+**Dataset Source:** [Open University Learning Analytics Dataset](https://analyse.kmi.open.ac.uk/open_dataset)
 
-Beberapa dataset utama yang digunakan:
+### Datasets Used
 
-| Dataset                   | Deskripsi                                                     |
-| ------------------------- | ------------------------------------------------------------- |
-| `studentInfo.csv`         | Informasi mahasiswa dan hasil akhir pembelajaran              |
-| `studentVle.csv`          | Catatan aktivitas mahasiswa pada Virtual Learning Environment |
-| `studentRegistration.csv` | Informasi pendaftaran dan pengunduran diri mahasiswa          |
-| `courses.csv`             | Informasi modul dan periode pembelajaran                      |
+| Dataset | Description |
+|---|---|
+| `studentInfo.csv` | Student information and final academic results |
+| `studentVle.csv` | Student activity records within the Virtual Learning Environment |
+| `studentRegistration.csv` | Student registration and withdrawal information |
+| `courses.csv` | Course modules and presentation information |
 
 ## Tools & Technologies
 
-- **Python** – Bahasa pemrograman untuk pengolahan dan analisis data.
-- **Pandas & NumPy** – Data manipulation dan data processing.
-- **Matplotlib & Seaborn** – Visualisasi data untuk Exploratory Data Analysis.
-- **PostgreSQL (Supabase)** – Penyimpanan dan analisis data menggunakan SQL.
-- **Google Colab** – Lingkungan pengembangan untuk menjalankan notebook Python.
-- **Power BI** – Pembuatan dashboard interaktif.
-- **Git & GitHub** – Dokumentasi dan pengelolaan proyek.
+| Technology | Purpose |
+|---|---|
+| Python | Programming language for data processing and analysis |
+| Pandas & NumPy | Data manipulation and processing |
+| Matplotlib & Seaborn | Data visualization and Exploratory Data Analysis |
+| PostgreSQL (Supabase) | Data storage and SQL-based analysis |
+| Google Colab | Environment for developing and executing Python notebooks |
+| Power BI | Interactive dashboard development |
+| Git & GitHub | Version control and project documentation |
 
-## Tahapan Proyek
+## Project Workflow
+
+The project was carried out through the following stages:
 
 1. **Data Understanding**  
-   Memahami struktur dataset, jumlah data, atribut, serta distribusi hasil belajar mahasiswa.
+   Examining dataset structures, record counts, attributes, and student academic performance distributions.
 
 2. **Data Cleaning**  
-   Memeriksa missing values, duplikasi, konsistensi tipe data, dan melakukan validasi data.
+   Checking missing values, duplicate records, data type consistency, and data validity.
 
 3. **SQL Analysis**  
-   Mengolah data aktivitas mahasiswa menggunakan PostgreSQL untuk menghasilkan metrik keterlibatan pembelajaran.
+   Processing student activity data using PostgreSQL to generate learning engagement metrics.
 
 4. **Exploratory Data Analysis (EDA)**  
-   Menganalisis pola aktivitas mahasiswa dan distribusi hasil belajar menggunakan Python.
+   Exploring student activity patterns and academic performance distributions using Python.
 
 5. **Dashboard Preparation**  
-   Menyiapkan dataset akhir, menentukan KPI, dan membuat kategori keterlibatan mahasiswa.
+   Preparing the final analytical dataset, defining key performance indicators (KPIs), and classifying student engagement levels.
 
 6. **Dashboard Development**  
-   Menyajikan hasil analisis melalui dashboard interaktif menggunakan Power BI.
+   Presenting analytical results through an interactive Power BI dashboard.
 
-## Key Performance Indicators (KPI)
+## Key Performance Indicators (KPIs)
 
-Beberapa indikator utama yang digunakan dalam proyek ini:
+The following indicators were used to evaluate student engagement and academic performance:
 
-| KPI                  |    Nilai | Deskripsi                                                              |
-| -------------------- | -------: | ---------------------------------------------------------------------- |
-| Total Enrollments    |   32.593 | Jumlah total pendaftaran mahasiswa pada modul dan periode pembelajaran |
-| Pass Rate            |   47,20% | Persentase mahasiswa dengan hasil Pass dan Distinction                 |
-| Withdrawal Rate      |   31,16% | Persentase mahasiswa yang memperoleh hasil Withdrawn                   |
-| Average Total Clicks | 1.215,14 | Rata-rata jumlah aktivitas klik mahasiswa pada VLE                     |
-| No VLE Activity Rate |   10,32% | Persentase mahasiswa yang tidak memiliki catatan aktivitas pada VLE    |
+| KPI | Value | Description |
+|---|---:|---|
+| Total Enrollments | 32,593 | Total number of student enrollments |
+| Pass Rate | 47.20% | Percentage of students achieving Pass or Distinction |
+| Withdrawal Rate | 31.16% | Percentage of students with a Withdrawn result |
+| Average Total Clicks | 1,215.14 | Average number of student clicks recorded on the VLE |
+| No VLE Activity Rate | 10.32% | Percentage of students without recorded VLE activity |
 
-## Hasil Analisis dan Temuan Utama
+## Key Findings
 
-Berdasarkan proses analisis yang telah dilakukan, diperoleh beberapa temuan:
+The analysis produced several important findings:
 
-1. **Distribusi Hasil Belajar**  
-   Hasil belajar mahasiswa terdiri dari Pass sebesar 37,93%, Distinction sebesar 9,28%, Fail sebesar 21,64%, dan Withdrawn sebesar 31,16%.
+1. **Academic Performance Distribution**  
+   Student results consisted of 37.93% Pass, 9.28% Distinction, 21.64% Fail, and 31.16% Withdrawn.
 
-2. **Keterlibatan dan Hasil Belajar**  
-   Mahasiswa dengan hasil Distinction memiliki rata-rata aktivitas klik lebih tinggi dibandingkan kelompok hasil belajar lainnya. Hal ini menunjukkan adanya pola keterkaitan antara aktivitas pada VLE dan hasil belajar.
+2. **Student Engagement and Academic Performance**  
+   Students who achieved Distinction had a higher average number of VLE clicks compared to other academic result groups. This indicates an observed relationship between VLE activity and academic performance.
 
-3. **Kategori Keterlibatan Mahasiswa**  
-   Mahasiswa dikelompokkan menjadi empat kategori, yaitu High, Medium, Low, dan No Activity berdasarkan jumlah aktivitas pada VLE.
+3. **Student Engagement Classification**  
+   Students were classified into four engagement categories based on their VLE activity: High, Medium, Low, and No Activity.
 
-4. **Mahasiswa Tanpa Aktivitas VLE**  
-   Dari 3.365 mahasiswa yang tidak memiliki catatan aktivitas pada VLE, sebanyak 2.988 mahasiswa atau 88,80% memperoleh hasil Withdrawn.
+4. **Students Without VLE Activity**  
+   Among 3,365 students without recorded VLE activity, 2,988 students (88.80%) received a Withdrawn result.
 
-## Rekomendasi Bisnis
+## Business Recommendations
 
-Berdasarkan hasil analisis, beberapa rekomendasi yang dapat dipertimbangkan oleh institusi pendidikan adalah:
+Based on the analytical findings, educational institutions may consider the following actions:
 
-- Melakukan pemantauan berkala terhadap aktivitas mahasiswa pada platform pembelajaran.
-- Mengidentifikasi mahasiswa dengan tingkat keterlibatan rendah sebagai langkah awal untuk memberikan pendampingan.
-- Mengembangkan sistem peringatan dini (_early warning system_) untuk membantu mendeteksi potensi pengunduran diri mahasiswa.
-- Meningkatkan strategi pendampingan dan dukungan pembelajaran bagi mahasiswa yang menunjukkan penurunan aktivitas.
+- Monitor student activity on learning platforms regularly.
+- Identify students with low engagement levels as an initial step toward providing academic support.
+- Develop an early warning system to help detect students who may be at risk of withdrawal.
+- Improve academic guidance and learning support for students showing declining engagement.
 
 ## Dashboard
 
-Dashboard interaktif dikembangkan menggunakan Power BI untuk menyajikan informasi mengenai hasil belajar, tingkat keterlibatan, rata-rata aktivitas klik, dan mahasiswa tanpa aktivitas VLE.
+An interactive dashboard was developed using **Power BI** to present student academic performance, engagement levels, average VLE clicks, and students without recorded VLE activity.
 
-![Dashboard EdTech Learning Analytics](images/dashboard_screenshot.png)
+<div align="center">
 
-## Batasan Analisis
+![EdTech Learning Analytics Dashboard](images/dashboard_screenshot.png)
 
-- Jumlah klik pada VLE tidak secara langsung menggambarkan kualitas atau pemahaman mahasiswa terhadap materi pembelajaran.
-- Tidak adanya catatan aktivitas pada VLE tidak selalu berarti mahasiswa tidak melakukan kegiatan belajar.
-- Lama periode keterlibatan mahasiswa dapat memengaruhi jumlah aktivitas yang tercatat.
-- Analisis ini bersifat deskriptif sehingga tidak dapat digunakan untuk menyimpulkan hubungan sebab-akibat.
+*EdTech Learning Analytics – Power BI Dashboard*
 
-## Struktur Repository
+</div>
+
+## Analysis Limitations
+
+- The number of VLE clicks does not directly represent the quality of student learning or their understanding of the learning materials.
+- The absence of recorded VLE activity does not necessarily mean that students did not participate in other learning activities.
+- The length of student engagement periods may influence the number of recorded activities.
+- This analysis is descriptive and cannot establish cause-and-effect relationships.
+
+## Repository Structure
 
 ```text
 edtech-learning-analytics/
@@ -132,5 +160,5 @@ edtech-learning-analytics/
 ├── reports/
 │
 ├── README.md
+├── README.id.md
 └── .gitignore
-```
